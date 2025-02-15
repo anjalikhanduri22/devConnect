@@ -2,14 +2,9 @@ const express = require("express");
 
 const app = express();
 
-app.use("/test", (req, res) => {
+app.get("/user/:userId", (req, res) => {
+  console.log(req.params);
   res.send("hello from the server");
-});
-app.use("/hello", (req, res) => {
-  res.send("hello hello from the server");
-});
-app.use("/", (req, res) => {
-  res.send("wellcome");
 });
 
 app.listen(7777, () => {
