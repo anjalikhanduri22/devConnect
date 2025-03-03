@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "supervisor src/app.js",
+    "dev": "supervisor src/app.js"
   },
   "author": "anjali",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "supervisor": "^0.12.0",
+    "validator": "^13.12.0"
   }
 }
