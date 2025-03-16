@@ -1,5 +1,4 @@
 const validator = require("validator");
-
 const validateSignUpData = (req) => {
   const { firstName, lastName, emailId, password } = req.body;
 
@@ -11,7 +10,6 @@ const validateSignUpData = (req) => {
     throw new Error("please enter a strong password");
   }
 };
-
 const validateEditProfileData = (req) => {
   const allowedEditFields = [
     "firstName",
@@ -22,7 +20,6 @@ const validateEditProfileData = (req) => {
     "skills",
     "photoUrl",
   ];
-
   const isEditAllowed = Object.keys(req.body).every((field) =>
     allowedEditFields.includes(field)
   );
