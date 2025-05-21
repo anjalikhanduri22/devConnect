@@ -11,6 +11,7 @@ const requestRouter = require("./routes/request");
 const userRouter = require("./routes/user");
 const initializeSocket = require("./utils/socket");
 const chatRouter = require("./routes/chat");
+const paymentRouter = require("./routes/payment");
 require("dotenv").config();
 
 const app = express();
@@ -28,6 +29,7 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 app.use("/", chatRouter);
+app.use("/", paymentRouter);
 
 const server = http.createServer(app);
 initializeSocket(server);
